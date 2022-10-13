@@ -1,0 +1,24 @@
+name: pyspark-env 
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - jupyter
+  - openjdk=11.*
+  - ipython
+  - pip:
+    - setuptools
+    - setuptools-scm
+    - wheel
+    - awscli
+    - awswrangler
+    - pyspark==3.3.0
+    - pyarrow
+    - numpy
+    - freezegun
+    - requests
+    - tabulate
+    - pprintpp
+    - pytest
+
