@@ -1,8 +1,3 @@
 # pyspark-env
-A simple project to work with pyspark.
-
-Build a conda environment by running the following.
-
-```
-conda env create --file=./environment.yml
-```
+A simple conda project to practice pyspark queries.
+note: this [bootstrap class](./src/fraser/bootstrap.py) will start spark either ECS or from an existing development environment.
