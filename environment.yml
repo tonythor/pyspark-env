@@ -21,4 +21,5 @@ dependencies:
     - tabulate
     - pprintpp
     - pytest
+    - pysqlite3 
 

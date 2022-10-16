@@ -73,3 +73,14 @@ lusitania.limit(5).show()
 lusitania.groupBy("Department/Class").count().orderBy(desc('count')).show(100, False)
 
 
+
+# In [2]: from pyspark.sql import SparkSession
+#    ...:
+#    ...: spark = SparkSession.builder\
+#    ...:            .config('spark.jars.packages', 'org.xerial:sqlite-jdbc:3.34.0')\
+#    ...:            .getOrCreate()
+#    ...:
+#    ...: df = spark.read.format('jdbc') \
+#    ...:         .options(driver='org.sqlite.JDBC', dbtable='customers',
+#    ...:                  url='jdbc:sqlite:data/chinook.db')\
+#    ...:         .load()
