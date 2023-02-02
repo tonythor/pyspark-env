@@ -2,8 +2,8 @@
 A simple virtualenv to practice pyspark queries.
 
 And: 
-    * loading data from sqlite
-    * prohpet forecasts
+* loading data from sqlite
+* prohpet forecasts
 
 
 
