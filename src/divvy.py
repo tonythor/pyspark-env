@@ -8,8 +8,12 @@ from pyspark.ml.stat import Correlation
 b = Bootstrap()
 spark = b.get_spark()
 
-q42019_loc = "s3a://tonyfraser/g/Divvy_Trips_2019_Q4.csv"
-q12020_loc = "s3a://tonyfraser/g/Divvy_Trips_2020_Q1.csv"
+
+# https://divvy-tripdata.s3.amazonaws.com/index.html 
+q42019_loc = "s3a://tonyfraser-data/divvytrips/Divvy_Trips_2019_Q4.csv.gz"
+q12020_loc = "s3a://tonyfraser-data/divvytrips/Divvy_Trips_2020_Q1.csv.gz"
+
+
 
 q42019 = spark.read.option("header", True).option("inferSchema", True).csv(q42019_loc)
 q42019.printSchema() 
