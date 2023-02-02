@@ -2,6 +2,14 @@
 A simple virtualenv to practice pyspark queries.
 
 
+(
+And: 
+    loading data from sqlite
+    prohpet forecasts
+
+)
+
+
 ## project set up
 ### 1 download
 git clone wherever you want to run this project from

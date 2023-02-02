@@ -1,18 +1,18 @@
-#setuptools
 pip
 ipython
 install-jdk
-#setuptools-scm
 wheel
 awscli
-#awswrangler
 pyspark==3.3.0
 pyarrow
 numpy
-#freezegun
 requests
-#tabulate
 pprintpp
-#pytest
-#pysqlite3 
+prophet
+pyspark[sql]
+pip install pyspark[pandas_on_spark]
+
+
+
+
 
