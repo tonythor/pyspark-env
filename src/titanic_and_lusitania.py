@@ -25,8 +25,9 @@ fname = udf(lambda s: get_first_name(s), StringType())
 #The titanic went down in 1912
 titanic_r = spark.read.option("header", True). \
     option("inferSchema", True). \
-    csv(titanic_data_file). \
-    withColumnRenamed('Survived', 'survived')
+    csv(titanic_data_file)
+
+
 titanic = titanic_r. \
     withColumn('ship', lit('titanic')). \
     withColumn('lname', lower(lname(titanic_r.Name))). \
