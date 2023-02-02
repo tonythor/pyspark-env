@@ -51,3 +51,4 @@ MANIFEST
 
 #visual studio pythonpath environment file
 .env 
+lib/
