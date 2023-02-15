@@ -10,4 +10,3 @@ requests
 pprintpp
 prophet
 pyspark[sql]
-pip install pyspark[pandas_on_spark]
