@@ -42,12 +42,12 @@ set up your spark home:
 ```
 export SPARK_HOME=/Users/****/Documents/src/pyspark-env/.venv/lib/python3.10/site-packages/pyspark
 ./download_spark_jars.sh
-cp ./lib/*.jar SPARK_HOME/jars/. 
+cp ./lib/*.jar $SPARK_HOME/jars/. 
 
 ```
 
 ### 5 adjust activate
-set and unset SPARK_HOME and JAVA_HOME in .venv/bin/activate
+add set and unset SPARK_HOME and JAVA_HOME in .venv/bin/activate and deactivate
 
 
 ### 6 test with real data
