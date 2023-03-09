@@ -10,3 +10,6 @@ requests
 pprintpp
 prophet
 pyspark[sql]
+pandas
+pystan
+Cython
