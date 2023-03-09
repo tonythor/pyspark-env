@@ -66,7 +66,7 @@ forecastSpark.select(min("ds").alias("min_forecast"), max("ds").alias("max_forec
 
 
 # save as pandas and/or spark
-forecast.take(500).to_csv('./data/pandas_prophet_forecast_output.csv') 
+forecast.head(500).to_csv('./data/pandas_prophet_forecast_output.csv') 
 forecastSpark.limit(500) \
     .repartition(1) \
     .write.mode("overwrite").option("header", True) \

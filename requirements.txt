@@ -13,3 +13,5 @@ pyspark[sql]
 pandas
 pystan
 Cython
+plotly==5.13.1
+pystan==3.6.0

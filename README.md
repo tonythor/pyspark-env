@@ -72,9 +72,9 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 In [3]: spark.read.csv("s3a://tonyfraser-data/delayed_flights/*.csv").show(3)
 ```
 
-## Notes
+### spark notes
 1. This [bootstrap class](./src/fraser/bootstrap.py) will start spark either ECS, EMR or ~/.aws/credentials 
-2. Add somethign liek this to ./.venv/bin/activate to run locally. 
+2. Add something like this to ./.venv/bin/activate run your code locally: 
 ```sh
 export JAVA_HOME="/Users/afraser/.jdk/jdk-11.0.18+10/Contents/Home"
 export SPARK_HOME="/Users/afraser/Documents/src/pyspark-env/.venv/lib/python3.10/site-packages/pyspark"
