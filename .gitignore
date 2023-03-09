@@ -52,3 +52,5 @@ MANIFEST
 #visual studio pythonpath environment file
 .env 
 lib/
+*.crc 
+*_SUCCESS 
