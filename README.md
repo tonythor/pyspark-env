@@ -82,14 +82,16 @@ export PYTHONPATH="/Users/afraser/Documents/src/pyspark-env/src:/Users/afraser/D
 ```
 
 ## Prophet
-1. Keep trying to run the prophet_forecast demo every time you make a change. 
-1. Prophet isn't going to work becuase you need the right pystan, that needs the a stan, and that probably isn't right either.
-- First go clone httpstan and build it into a whl, and pip isntall it into this venv. (httpstan-4.9.1-cp310-cp310-macosx_13_0_arm64.whl ish, and you may want to save it after you make it!)
-- Next, pip3 install the most recent version of pystan. 
-- there is no LD_LIBRARY_PATH, but you need that stan binary. 
-```sh
-(.venv) hurricane:stan_model afraser$ pwd
-/Users/afraser/Documents/src/pyspark-env/.venv/lib/python3.10/site-packages/prophet/stan_model
-(.venv) hurricane:stan_model afraser$ cd ./cmdstan-2.26.1/stan/lib/stan_math/tbb prophet_model.bin
-(.venv) hurricane:stan_model afraser$ install_name_tool -add_rpath @executable_path/cmdstan-2.26.1/stan/lib/stan_math/lib/tbb prophet_model.bin
-```
+1. Try to run `python ./prophet_forecast.py` probably won't run but try. 
+1. Prophet needs pystan, and pystan needs the a stan, and neither are probably going to install correctly.
+1. To get pystan working... 
+   - First go clone httpstan, read the docs, and use poetry to build the wheel. (httpstan-4.9.1-cp310-cp310-macosx_13_0_arm64.whl ish, and you may want to save it after you make it!)
+   - Then, pip isntall the httpstan into this venv.
+   - Next, pip3 install the most recent version of pystan. 
+   - there is no LD_LIBRARY_PATH variable on OSX, but you need that stan binary in your ld library path. This is how I did it.  
+   ```sh
+   (.venv) hurricane:stan_model afraser$ pwd
+   /Users/afraser/Documents/src/pyspark-env/.venv/lib/python3.10/site-packages/prophet/stan_model
+   (.venv) hurricane:stan_model afraser$ cd ./cmdstan-2.26.1/stan/lib/stan_math/tbb prophet_model.bin
+   (.venv) hurricane:stan_model afraser$ install_name_tool -add_rpath @executable_path/cmdstan-2.26.1/stan/lib/stan_math/lib/tbb prophet_model.bin
+   ```
