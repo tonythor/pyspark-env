@@ -95,3 +95,4 @@ export PYTHONPATH="/Users/afraser/Documents/src/pyspark-env/src:/Users/afraser/D
    (.venv) hurricane:stan_model afraser$ cd ./cmdstan-2.26.1/stan/lib/stan_math/tbb prophet_model.bin
    (.venv) hurricane:stan_model afraser$ install_name_tool -add_rpath @executable_path/cmdstan-2.26.1/stan/lib/stan_math/lib/tbb prophet_model.bin
    ```
+1. As soon as you get pystan working, you should be able to run Prophet class member functions. 
